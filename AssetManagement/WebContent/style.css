@@ -1,0 +1,366 @@
+ @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 15px/1 'Open Sans', sans-serif;
+  color: #777;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+nav {
+  width: 200px;
+  background: #404040;
+}
+
+nav header {
+  position: relative;
+  height: 80px;
+  padding: 20px 0 0 15px;
+  font-size: 16px;
+  color: #fff;
+  background: #333333;
+}
+
+nav header span {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  border: 1px solid #fff;
+}
+
+nav header span:before {
+  content: '\f007';
+  font: normal 20px fontawesome;
+  top: 7px;
+  left: 9px;
+}
+
+nav header a:before {
+  content: '\f08b';
+  font: normal 20px fontawesome;
+  top: 28px;
+  right: 15px;
+}
+
+nav ul span {
+  display: block;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #333333;
+}
+
+nav ul a {
+  position: relative;
+  display: block;
+  padding: 15px 15px 17px 50px;
+  color: #fff;
+  border-bottom: 1px solid #333333;
+}
+
+nav ul a:hover,
+nav ul a.active {
+  background: #535353;
+}
+
+nav ul a:before {
+  font: normal 16px fontawesome;
+  top: 15px;
+  left: 18px;
+}
+
+nav ul li:nth-child(2) a:before {
+  content: '\f00a';
+}
+
+nav ul li:nth-child(3) a:before {
+  content: '\f012';
+}
+
+nav ul li:nth-child(4) a:before {
+  content: '\f018';
+}
+
+nav ul li:nth-child(5) a:before {
+  content: '\f024';
+}
+
+nav ul li:nth-child(6) a:before {
+  content: '\f0c3';
+}
+
+nav ul li:nth-child(7) a:before {
+  content: '\f09b';
+}
+
+nav ul li:nth-child(8) a:before {
+  content: '\f0fa';
+}
+
+nav ul li:nth-child(10) a:before {
+  content: '\f002';
+}
+
+nav ul li:nth-child(11) a:before {
+  content: '\f085';
+}
+
+nav ul li:nth-child(12) a:before {
+  content: '\f08b';
+}
+
+main {
+  flex: 1;
+  padding: 25px;
+  background: #f5f5f5;
+}
+
+main h1 {
+  height: 80px;
+  margin: -25px -25px 25px -25px;
+  padding: 0 25px;
+  line-height: 76px;
+  font-size: 24px;
+  font-weight: 400;
+  background: #ddd;
+}
+
+main h3 {
+  height: 40px;
+  margin: -25px -25px 25px -25px;
+  padding: 0 25px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  background: #ddd;
+  /* font-family: "Georgia" */
+}
+
+.flex-grid {
+  display: flex;
+}
+
+.flex-grid > div {
+  flex: 1;
+  margin: 0 20px 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.flex-grid > div:last-child {
+  margin-right: 0;
+}
+
+.flex-grid h2 {
+  margin: -15px -15px 15px -15px;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+
+.flex-grid li {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 0 0 25px;
+}
+
+.flex-grid li:before {
+  content: '\f00c';
+  font: normal 16px fontawesome;
+  top: 0;
+  left: 0;
+  color: #999;
+}
+
+@media (max-width: 1000px) {
+  .flex-grid {
+    flex-direction: column;
+  }
+
+  .flex-grid > div {
+    margin-right: 0;
+  }
+}
+
+
+.dropbtn {
+  background: #333333;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  min-width: 200px;
+  border: none;
+}
+
+.dropbtn button{
+  position: relative;
+  display: block;
+  padding: 15px 15px 17px 50px;
+  color: #fff;
+  border-bottom: 1px solid #333333;
+}
+
+.dropbtn button:before {
+  font: normal 16px fontawesome;
+  top: 15px;
+  left: 18px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown.dropdown-content a {
+  padding: 12px 16px;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  border-bottom: 1px solid #333333;
+}
+
+.dropdown-content a:before{
+  left: 18px;
+  top: 15px;
+  font: normal 16px fontawesome;
+}
+
+.dropdown-content a:hover {background-color: #535353;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #535353;}
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px;
+  overflow: visible;
+}
+input{
+  padding: 5px;
+  margin: 10px;
+}
+.radio-option{
+  display: inline-block;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811));
+	background:-moz-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-webkit-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-o-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-ms-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811',GradientType=0);
+	background-color:#77d42a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	cursor:pointer;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #aade7c;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
+	background:-moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-webkit-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-o-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-ms-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
+	background-color:#5cb811;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.requestButton {
+	-moz-box-shadow: 0px 0px 0px 0px #3dc21b;
+	-webkit-box-shadow: 0px 0px 0px 0px #3dc21b;
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#44c767;
+	border:2px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:8px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 2px #2f6627;
+}
+.requestButton:hover {
+	background-color:#5cbf2a;
+}
+.requestButton:active {
+	position:relative;
+	top:1px;
+}
+.category-dropdown{
+  padding: 7px;
+  margin: 10px;
+}
+.option {
+  padding: 7px;
+  margin: 10px;
+}
+ 
